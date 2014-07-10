@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device: MyString
+  virtual_server: false
+  virtual_platform: MyString
+  network: MyString
+  device_on_same_subnet: false
+  processor: MyString
+  operating_system: MyString
+  raid_configured: false
+  raid_type: MyString
+  drive_type: MyString
+  drive_speed: MyString
+  drive_capacity: MyString
+  ram_amount: 1
+  workload: MyString
+
+two:
+  device: MyString
+  virtual_server: false
+  virtual_platform: MyString
+  network: MyString
+  device_on_same_subnet: false
+  processor: MyString
+  operating_system: MyString
+  raid_configured: false
+  raid_type: MyString
+  drive_type: MyString
+  drive_speed: MyString
+  drive_capacity: MyString
+  ram_amount: 1
+  workload: MyString

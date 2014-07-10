@@ -1,0 +1,43 @@
+%h1 Listing surveys
+%table
+  %thead
+    %tr
+      %th Device
+      %th Virtual server
+      %th Virtual platform
+      %th Network
+      %th Device on same subnet
+      %th Processor
+      %th Operating system
+      %th Raid configured
+      %th Raid type
+      %th Drive type
+      %th Drive speed
+      %th Drive capacity
+      %th Ram amount
+      %th Workload
+      %th
+      %th
+      %th
+  %tbody
+    - @surveys.each do |survey|
+      %tr
+        %td= survey.device
+        %td= survey.virtual_server
+        %td= survey.virtual_platform
+        %td= survey.network
+        %td= survey.device_on_same_subnet
+        %td= survey.processor
+        %td= survey.operating_system
+        %td= survey.raid_configured
+        %td= survey.raid_type
+        %td= survey.drive_type
+        %td= survey.drive_speed
+        %td= survey.drive_capacity
+        %td= survey.ram_amount
+        %td= survey.workload
+        %td= link_to 'Show', survey
+        %td= link_to 'Edit', edit_survey_path(survey)
+        %td= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Survey', new_survey_path

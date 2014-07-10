@@ -1,0 +1,46 @@
+%p#notice= notice
+%p
+  %strong Device:
+  = @survey.device
+%p
+  %strong Virtual server:
+  = @survey.virtual_server
+%p
+  %strong Virtual platform:
+  = @survey.virtual_platform
+%p
+  %strong Network:
+  = @survey.network
+%p
+  %strong Device on same subnet:
+  = @survey.device_on_same_subnet
+%p
+  %strong Processor:
+  = @survey.processor
+%p
+  %strong Operating system:
+  = @survey.operating_system
+%p
+  %strong Raid configured:
+  = @survey.raid_configured
+%p
+  %strong Raid type:
+  = @survey.raid_type
+%p
+  %strong Drive type:
+  = @survey.drive_type
+%p
+  %strong Drive speed:
+  = @survey.drive_speed
+%p
+  %strong Drive capacity:
+  = @survey.drive_capacity
+%p
+  %strong RAM amount in GB:
+  = @survey.ram_amount
+%p
+  %strong Workload:
+  = @survey.workload
+= link_to 'Edit', edit_survey_path(@survey)
+|
+\#{link_to 'Back', surveys_path}

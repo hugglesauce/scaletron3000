@@ -6,10 +6,18 @@ gem 'rails', '4.0.8'
 # Use sqlite3 as the database for Active Record
 group :development do 
 	gem 'sqlite3', '1.3.8' 
+	gem 'better_errors'
 end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
+
+#simple form for making forms in HTML using rails easy
+gem 'simple_form'
+
+# shorthand HTML
+gem 'haml'
+gem 'html2haml'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.1.1'

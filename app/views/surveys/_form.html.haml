@@ -1,0 +1,53 @@
+= simple_form_for(@survey) do |f|
+  - if @survey.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@survey.errors.count, "error")
+        prohibited this survey from being saved:
+      %ul
+        - @survey.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    %br/
+    = f.input :device, collection: Survey.ncomputing_devices, include_blank: false
+  .field
+    %br/
+    = f.input :virtual_server, as: :check_boxes
+  .field
+    %br/
+    = f.input :virtual_platform
+  .field
+    %br/
+    = f.input :network
+  .field
+    %br/
+    = f.input :device_on_same_subnet, as: :check_boxes
+  .field
+    %br/
+    = f.input :processor
+  .field
+    %br/
+    = f.input :operating_system
+  .field
+    %br/
+    = f.input :raid_configured, as: :check_boxes
+  .field
+    %br/
+    = f.input :raid_type
+  .field
+    %br/
+    = f.input :drive_type
+  .field
+    %br/
+    = f.input :drive_speed
+  .field
+    %br/
+    = f.input :drive_capacity
+  .field
+    %br/
+    = f.input :ram_amount, collection: Survey.ram_sizes, label: "Ram Amount in GB", include_blank: false
+  .field
+    %br/
+    = f.input :workload
+  .actions
+    = f.submit
